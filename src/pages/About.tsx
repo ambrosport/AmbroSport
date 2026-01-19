@@ -35,7 +35,7 @@ export function About() {
       {/* Hero Section */}
       <section className="relative h-[600px] flex items-center justify-center text-white">
         <ImageWithFallback
-          src="/src/components/img/peruWEB-44.jpg"
+          src="/dist/assets/peruWEB-44.jpg"
           alt="Our team"
           className="absolute inset-0 w-full h-full object-cover"
         />
