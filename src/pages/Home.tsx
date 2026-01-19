@@ -30,25 +30,20 @@ export function Home() {
     },
   ];
 
-  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const statsRef = useRef<HTMLDivElement | null>(null);
   const numberRefs = useRef<HTMLSpanElement[]>([]);
 
   useEffect(() => {
-    const vid = videoRef.current;
-    if (!vid) return;
-
-    const onLoaded = () => setIsVideoLoaded(true);
-    vid.addEventListener('canplaythrough', onLoaded);
-    vid.addEventListener('loadeddata', onLoaded);
+    const onLoad = () => setIsLoaded(true);
+    window.addEventListener('load', onLoad);
 
     // Fallback: reveal after 6s in case events don't fire
-    const fallback = setTimeout(() => setIsVideoLoaded(true), 6000);
+    const fallback = setTimeout(() => setIsLoaded(true), 6000);
 
     return () => {
-      vid.removeEventListener('canplaythrough', onLoaded);
-      vid.removeEventListener('loadeddata', onLoaded);
+      window.removeEventListener('load', onLoad);
       clearTimeout(fallback);
     };
   }, []);
@@ -101,7 +96,7 @@ export function Home() {
   return (
     <div>
       {/* Preload overlay */}
-      {!isVideoLoaded && (
+      {!isLoaded && (
         <div className="absolute inset-0 z-50 flex items-center justify-center bg-white loader-overlay">
           <div className="flex flex-col items-center">
             <div className="w-24 h-24 rounded-full border-8 border-blue-600 border-t-transparent animate-spin mb-4 shadow-lg" />
@@ -110,7 +105,7 @@ export function Home() {
         </div>
       )}
       {/* Hero Section */}
-      <section className={`relative h-[800px] flex items-center justify-center text-white transition-opacity duration-500 ${isVideoLoaded ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+      <section className={`relative h-[800px] flex items-center justify-center text-white transition-opacity duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
         <video
           ref={videoRef}
           src={heroVideo}
