@@ -1,7 +1,12 @@
 import { ContactForm } from '../components/ContactForm';
 import { Users, Target, Award, Globe } from 'lucide-react';
-import { ImageWithFallback } from '../components/figma/ImageWithFallback';
-import AboutHero from './img/peruWEB-44';
+import peru44 from '../components/img/peruWEB-44.jpg';
+import peru17 from '../components/img/peruWEB-17.jpg';
+import steveImg from '../components/img/steve.png';
+import shariImg from '../components/img/SHARI.png';
+import maxHeadshot from '../components/img/max-headshot.jpg';
+import maryImg from '../components/img/mary.jpeg';
+import averyImg from '../components/img/avery-39.png';
 
 
 export function About() {
@@ -36,8 +41,8 @@ export function About() {
     <div>
       {/* Hero Section */}
       <section className="relative h-[600px] flex items-center justify-center text-white">
-        <ImageWithFallback
-          src= "const AboutHero"
+        <img
+          src={peru44}
           alt="Our team"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -74,8 +79,8 @@ export function About() {
               </div>
             </div>
             <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
-              <ImageWithFallback
-                src="dist/assets/peruWEB-17.jpg"
+              <img
+                src={peru17}
                 alt="Warehouse facility"
                 className="w-full h-full object-cover"
               />
@@ -205,8 +210,8 @@ His first job was with Polo Ralph Lauren where he specialized in men’s outerwe
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white about-block p-6 rounded-lg shadow-md flex flex-col items-start">
-              <ImageWithFallback
-                src="/src/components/img/steve.png"
+              <img
+                src={steveImg}
                 alt="Team member 1"
                 className="w-full h-48 object-cover rounded mb-4 about-img"
               />
@@ -216,8 +221,8 @@ His first job was with Polo Ralph Lauren where he specialized in men’s outerwe
             </div>
 
             <div className="bg-white about-block p-6 rounded-lg shadow-md flex flex-col items-start">
-              <ImageWithFallback
-                src="/src/components/img/SHARI.png"
+              <img
+                src={shariImg}
                 alt="Team member 2"
                 className="w-full h-48 object-cover rounded mb-4 about-img"
               />
@@ -227,8 +232,8 @@ His first job was with Polo Ralph Lauren where he specialized in men’s outerwe
             </div>
 
             <div className="bg-white about-block p-6 rounded-lg shadow-md flex flex-col items-start md:col-span-2">
-              <ImageWithFallback
-                src="/src/components/img/max-headshot.jpg"
+              <img
+                src={maxHeadshot}
                 alt="Team member 3"
                 className="w-full h-48 object-cover rounded mb-4 about-img"
               />
@@ -245,8 +250,8 @@ His first job was with Polo Ralph Lauren where he specialized in men’s outerwe
             </div>
 
             <div className="bg-white about-block p-6 rounded-lg shadow-md flex flex-col items-start md:col-span-2">
-              <ImageWithFallback
-                src="/src/components/img/mary.jpeg"
+              <img
+                src={maryImg}
                 alt="Team member 3"
                 className="w-full h-48 object-cover rounded mb-4 about-img"
               />
@@ -256,8 +261,8 @@ His first job was with Polo Ralph Lauren where he specialized in men’s outerwe
             </div>
 
             <div className="bg-white about-block p-6 rounded-lg shadow-md flex flex-col items-start md:col-span-2">
-              <ImageWithFallback
-                src="/src/components/img/avery-39.png"
+              <img
+                src={averyImg}
                 alt="Team member 3"
                 className="w-full h-48 object-cover rounded mb-4 about-img"
               />
