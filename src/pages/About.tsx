@@ -1,6 +1,8 @@
 import { ContactForm } from '../components/ContactForm';
 import { Users, Target, Award, Globe } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
+import AboutHero from './img/peruWEB-44';
+
 
 export function About() {
   const values = [
@@ -35,7 +37,7 @@ export function About() {
       {/* Hero Section */}
       <section className="relative h-[600px] flex items-center justify-center text-white">
         <ImageWithFallback
-          src="/dist/assets/peruWEB-44.jpg"
+          src= "const AboutHero"
           alt="Our team"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -73,7 +75,7 @@ export function About() {
             </div>
             <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
               <ImageWithFallback
-                src="/src/components/img/peruWEB-17.jpg"
+                src="dist/assets/peruWEB-17.jpg"
                 alt="Warehouse facility"
                 className="w-full h-full object-cover"
               />
