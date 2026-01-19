@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import ambroLogo from './logos/ambroLogo.png';
 
 export function Navigation() {
   const location = useLocation();
@@ -20,7 +21,7 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-screen">
         <div className="flex justify-between items-center h-full">
           <Link to="/" className="text-3xl font-bold text-blue-600">
-            <img src="/src/components/logos/ambroLogo.png" alt="Ambro Logo" className="header-logo" />
+            <img src={ambroLogo} alt="Ambro Logo" className="header-logo" />
           </Link>
 
           {/* Desktop Navigation */}
