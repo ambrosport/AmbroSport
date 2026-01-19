@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Lightbox from '../components/Lightbox';
-import { ImageWithFallback } from '../components/figma/ImageWithFallback';
+import peru10 from '../components/img/peruWEB-10.jpg';
 import { ContactForm } from '../components/ContactForm';
 
 
@@ -39,8 +39,8 @@ export function Products() {
     <div>
       {/* Hero Section matching Services/Home style */}
      <section className="relative h-[400px] flex items-center justify-center text-white">
-             <ImageWithFallback
-               src="/src/components/img/peruWEB-10.jpg"
+             <img
+               src={peru10}
                alt="Our team"
                className="absolute inset-0 w-full h-full object-cover"
              />

@@ -1,7 +1,7 @@
 import { ContactForm } from '../components/ContactForm';
 import { ArrowRight, CheckCircle, Icon } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { ImageWithFallback } from '../components/figma/ImageWithFallback';
+// ImageWithFallback removed; no direct image used in this page
 import heroVideo from '../components/logos/herovid.mp4';
 import LogoCarousel from '../components/LogoCarousel';
 import { useEffect, useRef, useState } from 'react';

@@ -1,6 +1,6 @@
 import { ContactForm } from '../components/ContactForm';
 import { Factory, PencilLine, Truck, Headphones, Wrench, Shield } from 'lucide-react';
-import { ImageWithFallback } from '../components/figma/ImageWithFallback';
+import peru21 from '../components/img/peruWEB-21.jpg';
 
 export function Services() {
   const services = [
@@ -58,8 +58,8 @@ export function Services() {
     <div>
       {/* Hero Section */}
       <section className="relative h-[600px] flex items-center justify-center text-white">
-        <ImageWithFallback
-          src="/src/components/img/peruWEB-21.jpg"
+        <img
+          src={peru21}
           alt="Logistics operations"
           className="absolute inset-0 w-full h-full object-cover"
         />
