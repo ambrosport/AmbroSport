@@ -102,7 +102,7 @@ export function Home() {
     <div>
       {/* Preload overlay */}
       {!isVideoLoaded && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-white">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-white loader-overlay">
           <div className="flex flex-col items-center">
             <div className="w-24 h-24 rounded-full border-8 border-blue-600 border-t-transparent animate-spin mb-4 shadow-lg" />
             <div className="text-blue-600 font-semibold text-lg">Loading</div>

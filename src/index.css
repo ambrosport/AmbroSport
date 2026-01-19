@@ -83,6 +83,11 @@
   }
 }
 
+.loader-overlay{
+  height: 100%;
+  width: 100%;
+}
+
 .about-img{
   filter: grayscale(100%);
 }
