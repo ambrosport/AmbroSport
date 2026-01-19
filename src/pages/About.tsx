@@ -7,6 +7,7 @@ import shariImg from '../components/img/SHARI.png';
 import maxHeadshot from '../components/img/max-headshot.jpg';
 import maryImg from '../components/img/mary.jpeg';
 import averyImg from '../components/img/avery-39.png';
+import { usePageLoad } from '../hooks/usePageLoad';
 
 
 export function About() {
@@ -37,8 +38,17 @@ export function About() {
     },
   ];
 
+  const isLoaded = usePageLoad();
+
   return (
-    <div>
+    <div className="relative">
+      {/* Page Loader */}
+      <div className={`absolute inset-0 z-50 flex items-center justify-center bg-white loader-overlay ${isLoaded ? 'hidden' : ''}`}>
+        <div className="flex flex-col items-center">
+          <div className="w-24 h-24 rounded-full border-8 border-blue-600 border-t-transparent animate-spin mb-4 shadow-lg" />
+          <div className="text-blue-600 font-semibold text-lg">Loading</div>
+        </div>
+      </div>
       {/* Hero Section */}
       <section className="relative h-[600px] flex items-center justify-center text-white">
         <img

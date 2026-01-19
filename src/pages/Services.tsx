@@ -1,6 +1,7 @@
 import { ContactForm } from '../components/ContactForm';
 import { Factory, PencilLine, Truck, Headphones, Wrench, Shield } from 'lucide-react';
 import peru21 from '../components/img/peruWEB-21.jpg';
+import { usePageLoad } from '../hooks/usePageLoad';
 
 export function Services() {
   const services = [
@@ -54,8 +55,17 @@ export function Services() {
 
   ];
 
+  const isLoaded = usePageLoad();
+
   return (
-    <div>
+    <div className="relative">
+      {/* Page Loader */}
+      <div className={`absolute inset-0 z-50 flex items-center justify-center bg-white loader-overlay ${isLoaded ? 'hidden' : ''}`}>
+        <div className="flex flex-col items-center">
+          <div className="w-24 h-24 rounded-full border-8 border-blue-600 border-t-transparent animate-spin mb-4 shadow-lg" />
+          <div className="text-blue-600 font-semibold text-lg">Loading</div>
+        </div>
+      </div>
       {/* Hero Section */}
       <section className="relative h-[600px] flex items-center justify-center text-white">
         <img
