@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 // ImageWithFallback removed; no direct image used in this page
 import heroVideo from '../components/logos/herovid.mp4';
 import LogoCarousel from '../components/LogoCarousel';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
 export function Home() {
   const features = [
@@ -30,23 +30,8 @@ export function Home() {
     },
   ];
 
-  const [isLoaded, setIsLoaded] = useState(false);
-  const videoRef = useRef<HTMLVideoElement | null>(null);
   const statsRef = useRef<HTMLDivElement | null>(null);
   const numberRefs = useRef<HTMLSpanElement[]>([]);
-
-  useEffect(() => {
-    const onLoad = () => setIsLoaded(true);
-    window.addEventListener('load', onLoad);
-
-    // Fallback: reveal after 6s in case events don't fire
-    const fallback = setTimeout(() => setIsLoaded(true), 6000);
-
-    return () => {
-      window.removeEventListener('load', onLoad);
-      clearTimeout(fallback);
-    };
-  }, []);
 
   useEffect(() => {
     const gsapGlobal = (window as any).gsap;
@@ -95,19 +80,9 @@ export function Home() {
 
   return (
     <div>
-      {/* Preload overlay */}
-      {!isLoaded && (
-        <div className="absolute inset-0 z-50 flex items-center justify-center bg-white loader-overlay">
-          <div className="flex flex-col items-center">
-            <div className="w-24 h-24 rounded-full border-8 border-blue-600 border-t-transparent animate-spin mb-4 shadow-lg" />
-            <div className="text-blue-600 font-semibold text-lg">Loading</div>
-          </div>
-        </div>
-      )}
       {/* Hero Section */}
-      <section className={`relative h-[800px] flex items-center justify-center text-white transition-opacity duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+      <section className="relative h-[800px] flex items-center justify-center text-white">
         <video
-          ref={videoRef}
           src={heroVideo}
           preload="auto"
           autoPlay
