@@ -7,6 +7,7 @@ import LogoCarousel from '../components/LogoCarousel';
 import { useEffect, useRef } from 'react';
 import { usePageLoad } from '../hooks/usePageLoad';
 import heroVideoMobile from '../components/logos/herovidMobile.mp4';
+import peruImage from '../components/img/peruWEB-21.jpg';
 
 export function Home() {
   const isLoaded = usePageLoad();
@@ -99,6 +100,7 @@ export function Home() {
           muted
           loop
           playsInline
+          poster={peruImage}
           className="absolute inset-0 w-full h-full object-cover hidden md:block"
         />
         <video
@@ -108,6 +110,7 @@ export function Home() {
           muted
           loop
           playsInline
+          poster={peruImage}
           className="absolute inset-0 w-full h-full object-cover block md:hidden"
         />
         <div className="absolute inset-0 bg-black/50" />
