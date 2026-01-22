@@ -1121,12 +1121,12 @@
     }
   }
 
-  @media (width >= 23rem) {
+  @media (width >= 48rem) {
     .md\:block {
       display: block;
     }
   }
-  @media (width >= 22rem) {
+  @media (width >= 48rem) {
     .md\:hidden {
       display: none;
     }
