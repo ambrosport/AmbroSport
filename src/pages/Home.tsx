@@ -6,6 +6,7 @@ import heroVideo from '../components/logos/herovid.mp4';
 import LogoCarousel from '../components/LogoCarousel';
 import { useEffect, useRef } from 'react';
 import { usePageLoad } from '../hooks/usePageLoad';
+import heroVideoMobile from '../components/logos/herovidMobile.mp4';
 
 export function Home() {
   const isLoaded = usePageLoad();
@@ -98,7 +99,16 @@ export function Home() {
           muted
           loop
           playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover hidden md:block"
+        />
+        <video
+          src={heroVideoMobile}
+          preload="auto"
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover block md:hidden"
         />
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
