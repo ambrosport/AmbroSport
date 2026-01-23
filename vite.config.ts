@@ -52,6 +52,12 @@
     build: {
       target: 'esnext',
       outDir: 'dist',
+      rollupOptions: {
+        input: {
+          main: './index.html',
+          server: './src/entry-server.tsx',
+        },
+      },
     },
     server: {
       port: 3000,
