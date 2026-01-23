@@ -16,6 +16,7 @@ export async function handler(event: any) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ambro Sport</title>
+    <link rel="stylesheet" href="/assets/main-CYDAZ-Ve.css" />
   </head>
   <body>
     <div id="root">${html}</div>
