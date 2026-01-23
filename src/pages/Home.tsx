@@ -1,3 +1,4 @@
+import React from 'react';
 import { ContactForm } from '../components/ContactForm';
 import { ArrowRight, CheckCircle, Icon } from 'lucide-react';
 import { Link } from 'react-router-dom';

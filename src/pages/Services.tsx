@@ -1,3 +1,4 @@
+import React from 'react';
 import { ContactForm } from '../components/ContactForm';
 import { Factory, PencilLine, Truck, Headphones, Wrench, Shield } from 'lucide-react';
 const peru21 = '/img/peruWEB-21.jpg';

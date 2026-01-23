@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import Lightbox from '../components/Lightbox';
 const peru10 = '/img/peruWEB-10.jpg';

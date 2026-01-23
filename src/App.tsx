@@ -1,3 +1,4 @@
+import React from 'react';
 import { Route, Switch } from 'react-router';
 import { Navigation } from './components/Navigation';
 import { Footer } from './components/Footer';

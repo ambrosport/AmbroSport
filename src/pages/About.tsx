@@ -1,3 +1,4 @@
+import React from 'react';
 import { ContactForm } from '../components/ContactForm';
 import { Users, Target, Award, Globe } from 'lucide-react';
 const peru44 = '/img/peruWEB-44.jpg';
