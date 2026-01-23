@@ -1,4 +1,3 @@
-import React from 'react';
 import { renderToString } from "react-dom/server";
 import { Router } from 'react-router';
 import { createMemoryHistory } from 'history';
