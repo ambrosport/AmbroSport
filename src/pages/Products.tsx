@@ -1,25 +1,25 @@
 import { useState } from 'react';
 import Lightbox from '../components/Lightbox';
-import peru10 from '../components/img/peruWEB-10.jpg';
+const peru10 = '/img/peruWEB-10.jpg';
 import { ContactForm } from '../components/ContactForm';
 import { usePageLoad } from '../hooks/usePageLoad';
 
 
-import img1 from '../components/products/product-1.png';
-import img2 from '../components/products/product-14.png';
-import img3 from '../components/products/product-3.png';
-import img4 from '../components/products/product-4.png';
-import img5 from '../components/products/product-9.png';
-import img6 from '../components/products/product-10.png';
-import img7 from '../components/products/product-7.png';
-import img8 from '../components/products/product-8.png';
-import img9 from '../components/products/product-5.png';
-import img10 from '../components/products/product-6.png';
-import img11 from '../components/products/product-11.png';
-import img12 from '../components/products/product-12.png';
-import img13 from '../components/products/product-13.png';
-import img14 from '../components/products/product-2.png';
-import img15 from '../components/products/product-15.png';
+const img1 = '/img/product-1.png';
+const img2 = '/img/product-14.png';
+const img3 = '/img/product-3.png';
+const img4 = '/img/product-4.png';
+const img5 = '/img/product-9.png';
+const img6 = '/img/product-10.png';
+const img7 = '/img/product-7.png';
+const img8 = '/img/product-8.png';
+const img9 = '/img/product-5.png';
+const img10 = '/img/product-6.png';
+const img11 = '/img/product-11.png';
+const img12 = '/img/product-12.png';
+const img13 = '/img/product-13.png';
+const img14 = '/img/product-2.png';
+const img15 = '/img/product-15.png';
 
 
 const IMAGES = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15];

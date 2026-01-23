@@ -1,14 +1,14 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 
-import asw from './logos/ASW-LOGO.png';
-import ch from './logos/CHRLDR-LOGO.png';
-import fila from './logos/Fila-logo.png';
-import swb from './logos/SWB-logo.png';
-import coastal from './logos/coastal-cotton.png';
-import onward from './logos/onward-logo.png';
-import southern from './logos/southern-proper-logo.png';
-import simmons from './logos/stewartsimmons.png';
-import KC from './logos/KC.png';
+const asw = '/img/ASW-LOGO.png';
+const ch = '/img/CHRLDR-LOGO.png';
+const fila = '/img/Fila-logo.png';
+const swb = '/img/SWB-logo.png';
+const coastal = '/img/coastal-cotton.png';
+const onward = '/img/onward-logo.png';
+const southern = '/img/southern-proper-logo.png';
+const simmons = '/img/stewartsimmons.png';
+const KC = '/img/KC.png';
 
 const logos = [asw, ch, fila, swb, coastal, onward, southern, simmons, KC];
 

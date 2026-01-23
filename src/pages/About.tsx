@@ -1,12 +1,12 @@
 import { ContactForm } from '../components/ContactForm';
 import { Users, Target, Award, Globe } from 'lucide-react';
-import peru44 from '../components/img/peruWEB-44.jpg';
-import peru17 from '../components/img/peruWEB-17.jpg';
-import steveImg from '../components/img/steve.png';
-import shariImg from '../components/img/SHARI.png';
-import maxHeadshot from '../components/img/max-headshot.jpg';
-import maryImg from '../components/img/mary.jpeg';
-import averyImg from '../components/img/avery-39.png';
+const peru44 = '/img/peruWEB-44.jpg';
+const peru17 = '/img/peruWEB-17.jpg';
+const steveImg = '/img/steve.png';
+const shariImg = '/img/SHARI.png';
+const maxHeadshot = '/img/max-headshot.jpg';
+const maryImg = '/img/mary.jpeg';
+const averyImg = '/img/avery-39.png';
 import { usePageLoad } from '../hooks/usePageLoad';
 
 

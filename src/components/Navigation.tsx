@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
-import ambroLogo from './logos/ambroLogo.png';
+const ambroLogo = '/img/ambroLogo.png';
 
 export function Navigation() {
   const location = useLocation();

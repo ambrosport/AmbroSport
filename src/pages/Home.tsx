@@ -2,12 +2,12 @@ import { ContactForm } from '../components/ContactForm';
 import { ArrowRight, CheckCircle, Icon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 // ImageWithFallback removed; no direct image used in this page
-import heroVideo from '../components/logos/herovid.mp4';
+const heroVideo = '/img/herovid.mp4';
 import LogoCarousel from '../components/LogoCarousel';
 import { useEffect, useRef } from 'react';
 import { usePageLoad } from '../hooks/usePageLoad';
-import heroVideoMobile from '../components/logos/herovidMobile.mp4';
-import peruImage from '../components/img/peruWEB-21.jpg';
+const heroVideoMobile = '/img/herovidMobile.mp4';
+const peruImage = '/img/peruWEB-21.jpg';
 
 export function Home() {
   const isLoaded = usePageLoad();

@@ -1,6 +1,6 @@
 import { ContactForm } from '../components/ContactForm';
 import { Factory, PencilLine, Truck, Headphones, Wrench, Shield } from 'lucide-react';
-import peru21 from '../components/img/peruWEB-21.jpg';
+const peru21 = '/img/peruWEB-21.jpg';
 import { usePageLoad } from '../hooks/usePageLoad';
 
 export function Services() {
