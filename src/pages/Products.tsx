@@ -3,7 +3,6 @@ import { useState } from 'react';
 import Lightbox from '../components/Lightbox';
 const peru10 = '/img/peruWEB-10.jpg';
 import { ContactForm } from '../components/ContactForm';
-import { usePageLoad } from '../hooks/usePageLoad';
 
 
 const img1 = '/img/product-1.png';
@@ -21,6 +20,8 @@ const img12 = '/img/product-12.png';
 const img13 = '/img/product-13.png';
 const img14 = '/img/product-2.png';
 const img15 = '/img/product-15.png';
+
+const IMAGES = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15];
 
 export function Products() {
 
