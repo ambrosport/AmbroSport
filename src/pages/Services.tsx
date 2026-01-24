@@ -4,6 +4,55 @@ import { Factory, PencilLine, Truck, Headphones, Wrench, Shield } from 'lucide-r
 const peru21 = '/img/peruWEB-21.jpg';
 
 export function Services() {
+  const services = [
+    {
+      icon: Factory,
+      title: 'Custom Manufacturing',
+      description:
+        'Tailored manufacturing solutions to meet your specific requirements. From prototype to production, we deliver precision and quality at scale.',
+      features: [
+        'Prototype development',
+        'Mass production capabilities',
+        'Quality assurance testing',
+        'Custom design services',
+      ],
+    },
+    {
+      icon: PencilLine,
+      title: 'Design & Branding',
+      description:
+        'High-impact design and branding services to make your products stand out in the market.',
+      features: [
+        'In house design team',
+        'Logo creation',
+        'website and packaging design',
+        '2D/3D rendering & Animation',
+      ],
+    },
+    {
+      icon: Truck,
+      title: 'Logistics & Distribution',
+      description:
+        'Efficient supply chain management ensuring timely delivery of products to your doorstep or business location.',
+      features: [
+        'Speedy delivery options',
+        'Global shipping network',
+        'Real-time tracking',
+        'Bulk order handling',
+      ],
+    },
+    {
+      icon: Headphones,
+      title: 'Customer Support',
+      description:
+        'Dedicated support team available to assist with product selection, technical questions, and after-sales service.',
+      features: [
+        'Technical expertise',
+        'Multiple contact channels',
+        'Can answer both creative and technical questions',
+      ],
+    },
+  ];
 
   return (
     <div className="relative">

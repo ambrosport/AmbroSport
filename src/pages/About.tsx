@@ -10,6 +10,32 @@ const maryImg = '/img/mary.jpeg';
 const averyImg = '/img/avery-39.png';
 
 export function About() {
+  const values = [
+    {
+      icon: Target,
+      title: 'Our Mission',
+      description:
+        'To deliver exceptional products and services that exceed customer expectations while maintaining the highest standards of quality and sustainability.',
+    },
+    {
+      icon: Award,
+      title: 'Excellence',
+      description:
+        'We are committed to excellence in everything we do, from manufacturing to customer service, ensuring the best experience for our clients.',
+    },
+    {
+      icon: Globe,
+      title: 'Global Reach',
+      description:
+        'Operating across multiple continents, we bring our products and expertise to customers worldwide with local service and support.',
+    },
+    {
+      icon: Users,
+      title: 'Our People',
+      description:
+        'Our local team of dedicated professionals is the backbone of our success, bringing expertise and passion to their work every day.',
+    },
+  ];
 
   return (
     <div className="relative">
