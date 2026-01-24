@@ -22,13 +22,7 @@ const img13 = '/img/product-13.png';
 const img14 = '/img/product-2.png';
 const img15 = '/img/product-15.png';
 
-
-const IMAGES = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15];
-
 export function Products() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const isLoaded = usePageLoad();
 
   const openAt = (index: number) => {
     setCurrentIndex(index);
@@ -40,13 +34,6 @@ export function Products() {
 
   return (
     <div className="relative">
-      {/* Page Loader */}
-      <div className={`absolute inset-0 z-50 flex items-center justify-center bg-white loader-overlay ${isLoaded ? 'hidden' : ''}`}>
-        <div className="flex flex-col items-center">
-          <div className="w-24 h-24 rounded-full border-8 border-blue-600 border-t-transparent animate-spin mb-4 shadow-lg" />
-          <div className="text-blue-600 font-semibold text-lg">Loading</div>
-        </div>
-      </div>
       {/* Hero Section matching Services/Home style */}
       <section className="relative h-[400px] flex items-center justify-center text-white">
              <img

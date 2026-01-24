@@ -6,12 +6,10 @@ import { Link } from 'react-router-dom';
 const heroVideo = '/img/herovid.mp4';
 import LogoCarousel from '../components/LogoCarousel';
 import { useEffect, useRef } from 'react';
-import { usePageLoad } from '../hooks/usePageLoad';
 const heroVideoMobile = '/img/herovidMobile.mp4';
 const peruImage = '/img/peruWEB-21.jpg';
 
 export function Home() {
-  const isLoaded = usePageLoad();
   const features = [
     {
       Icon: CheckCircle,
@@ -85,13 +83,6 @@ export function Home() {
 
   return (
     <div className="relative">
-      {/* Page Loader */}
-      <div className={`absolute inset-0 z-50 flex items-center justify-center bg-white loader-overlay ${isLoaded ? 'hidden' : ''}`}>
-        <div className="flex flex-col items-center">
-          <div className="w-24 h-24 rounded-full border-8 border-blue-600 border-t-transparent animate-spin mb-4 shadow-lg" />
-          <div className="text-blue-600 font-semibold text-lg">Loading</div>
-        </div>
-      </div>
       {/* Hero Section */}
       <section className="relative h-[800px] flex items-center justify-center text-white">
         <video

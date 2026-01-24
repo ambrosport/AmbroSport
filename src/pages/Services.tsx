@@ -2,71 +2,11 @@ import React from 'react';
 import { ContactForm } from '../components/ContactForm';
 import { Factory, PencilLine, Truck, Headphones, Wrench, Shield } from 'lucide-react';
 const peru21 = '/img/peruWEB-21.jpg';
-import { usePageLoad } from '../hooks/usePageLoad';
 
 export function Services() {
-  const services = [
-    {
-      icon: Factory,
-      title: 'Custom Manufacturing',
-      description:
-        'Tailored manufacturing solutions to meet your specific requirements. From prototype to production, we deliver precision and quality at scale.',
-      features: [
-        'Prototype development',
-        'Mass production capabilities',
-        'Quality assurance testing',
-        'Custom design services',
-      ],
-    },
-    {
-      icon: PencilLine,
-      title: 'Design & Branding',
-      description:
-        'High-impact design and branding services to make your products stand out in the market.',
-      features: [
-        'In house design team',
-        'Logo creation',
-        'website and packaging design',
-        '2D/3D rendering & Animation',
-      ],
-    },
-    {
-      icon: Truck,
-      title: 'Logistics & Distribution',
-      description:
-        'Efficient supply chain management ensuring timely delivery of products to your doorstep or business location.',
-      features: [
-        'Speedy delivery options',
-        'Global shipping network',
-        'Real-time tracking',
-        'Bulk order handling',
-      ],
-    },
-    {
-      icon: Headphones,
-      title: 'Customer Support',
-      description:
-        'Dedicated support team available to assist with product selection, technical questions, and after-sales service.',
-      features: [
-        'Technical expertise',
-        'Multiple contact channels',
-        'Can answer both creative and technical questions',
-      ],
-    },
-
-  ];
-
-  const isLoaded = usePageLoad();
 
   return (
     <div className="relative">
-      {/* Page Loader */}
-      <div className={`absolute inset-0 z-50 flex items-center justify-center bg-white loader-overlay ${isLoaded ? 'hidden' : ''}`}>
-        <div className="flex flex-col items-center">
-          <div className="w-24 h-24 rounded-full border-8 border-blue-600 border-t-transparent animate-spin mb-4 shadow-lg" />
-          <div className="text-blue-600 font-semibold text-lg">Loading</div>
-        </div>
-      </div>
       {/* Hero Section */}
       <section className="relative h-[600px] flex items-center justify-center text-white">
         <img

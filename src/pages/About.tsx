@@ -8,48 +8,11 @@ const shariImg = '/img/SHARI.png';
 const maxHeadshot = '/img/max-headshot.jpg';
 const maryImg = '/img/mary.jpeg';
 const averyImg = '/img/avery-39.png';
-import { usePageLoad } from '../hooks/usePageLoad';
-
 
 export function About() {
-  const values = [
-    {
-      icon: Target,
-      title: 'Our Mission',
-      description:
-        'To deliver exceptional products and services that exceed customer expectations while maintaining the highest standards of quality and sustainability.',
-    },
-    {
-      icon: Award,
-      title: 'Excellence',
-      description:
-        'We are committed to excellence in everything we do, from manufacturing to customer service, ensuring the best experience for our clients.',
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description:
-        'Operating across multiple continents, we bring our products and expertise to customers worldwide with local service and support.',
-    },
-    {
-      icon: Users,
-      title: 'Our People',
-      description:
-        'Our local team of dedicated professionals is the backbone of our success, bringing expertise and passion to their work every day.',
-    },
-  ];
-
-  const isLoaded = usePageLoad();
 
   return (
     <div className="relative">
-      {/* Page Loader */}
-      <div className={`absolute inset-0 z-50 flex items-center justify-center bg-white loader-overlay ${isLoaded ? 'hidden' : ''}`}>
-        <div className="flex flex-col items-center">
-          <div className="w-24 h-24 rounded-full border-8 border-blue-600 border-t-transparent animate-spin mb-4 shadow-lg" />
-          <div className="text-blue-600 font-semibold text-lg">Loading</div>
-        </div>
-      </div>
       {/* Hero Section */}
       <section className="relative h-[600px] flex items-center justify-center text-white">
         <img
