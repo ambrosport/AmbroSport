@@ -9,7 +9,7 @@ export function Footer() {
           <div>
             <h3 className="text-white text-xl font-bold mb-4">Ambro</h3>
             <p className="text-sm">
-              Leading manufacturer and retailer delivering quality products and
+              Leading manufacturer delivering quality products and
               services since 2000.
             </p>
           </div>

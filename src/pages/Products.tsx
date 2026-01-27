@@ -23,6 +23,24 @@ const img15 = '/img/product-15.png';
 const img16 = '/img/product-16.png';
 const img17 = '/img/product-17.png';
 const img18 = '/img/product-18.png';
+const img19 = '/img/product-19.png';
+const img20 = '/img/product-20.png';
+const img21 = '/img/product-21.png';
+const img22 = '/img/product-22.png';
+const img23 = '/img/product-23.png';
+const img24 = '/img/product-24.png';
+const img25 = '/img/product-25.png';
+const img26 = '/img/product-26.png';
+const img27 = '/img/product-27.png';
+const img28 = '/img/product-28.png';
+const img29 = '/img/product-29.png';
+const img30 = '/img/product-30.png';
+const img31 = '/img/product-31.png';
+const img32 = '/img/product-32.png';
+const img33 = '/img/product-33.png';
+const img34 = '/img/product-34.png';
+const img35 = '/img/product-35.png';
+const img36 = '/img/product-36.png';
 
 const products = [
   { id: 1, src: img1, category: 'mens' },
@@ -43,6 +61,24 @@ const products = [
   { id: 16, src: img16, category: 'mens' },
   { id: 17, src: img17, category: 'mens' },
   { id: 18, src: img18, category: 'mens' },
+  { id: 19, src: img19, category: 'hats' },
+  { id: 20, src: img20, category: 'hats' },
+  { id: 21, src: img21, category: 'hats' },
+  { id: 22, src: img22, category: 'hats' },
+  { id: 23, src: img23, category: 'hats' },
+  { id: 24, src: img24, category: 'womens' },
+  { id: 25, src: img25, category: 'womens' },
+  { id: 26, src: img26, category: 'womens' },
+  { id: 27, src: img27, category: 'womens' },
+  { id: 28, src: img28, category: 'womens' },
+  { id: 29, src: img29, category: 'womens' },
+  { id: 30, src: img30, category: 'womens' },
+  { id: 31, src: img31, category: 'mens' },
+  { id: 32, src: img32, category: 'mens' },
+  { id: 33, src: img33, category: 'kids' },
+  { id: 34, src: img34, category: 'kids' },
+  { id: 35, src: img35, category: 'kids' },
+  { id: 36, src: img36, category: 'kids' },
 ];
 
 const IMAGES = products.map(p => p.src);
@@ -89,6 +125,7 @@ export function Products() {
               <TabsTrigger value="mens" className="data-[state=active]:bg-blue-600 data-[state=active]:text-white">Mens</TabsTrigger>
               <TabsTrigger value="womens" className="data-[state=active]:bg-blue-600 data-[state=active]:text-white">Womens</TabsTrigger>
               <TabsTrigger value="kids" className="data-[state=active]:bg-blue-600 data-[state=active]:text-white">Kids</TabsTrigger>
+              <TabsTrigger value="hats" className="data-[state=active]:bg-blue-600 data-[state=active]:text-white">Hats</TabsTrigger>
             </TabsList>
 
             <TabsContent value={activeTab} className="mt-0">
