@@ -16,13 +16,13 @@ export async function handler(event: any) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ambro Sport</title>
-    <link rel="stylesheet" href="/assets/main-CYDAZ-Ve.css" />
+    <link rel="stylesheet" href="/assets/main-CF3DcFTJ.css" />
   </head>
   <body>
     <div id="root">${html}</div>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
-    <script type="module" src="/src/entry-client.tsx"></script>
+    <script type="module" src="/assets/main-g91PknuK.js"></script>
   </body>
 </html>
     `,
