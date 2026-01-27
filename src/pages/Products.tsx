@@ -120,7 +120,7 @@ export function Products() {
             <p className="text-gray-600 mt-2">Browse our products by category. Click any image to view larger.</p>
           </div>
 
-          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+          <Tabs value={activeTab} onValueChange={setActiveTab} defaultValue="mens" className="w-full" suppressHydrationWarning>
             <TabsList className="flex justify-evenly mb-8 tab-header">
               <TabsTrigger value="mens" className="data-[state=active]:bg-blue-600 data-[state=active]:text-white">Mens</TabsTrigger>
               <TabsTrigger value="womens" className="data-[state=active]:bg-blue-600 data-[state=active]:text-white">Womens</TabsTrigger>
