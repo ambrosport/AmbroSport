@@ -3,10 +3,10 @@ import { ContactForm } from '../components/ContactForm';
 import { ArrowRight, CheckCircle, Icon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 // ImageWithFallback removed; no direct image used in this page
-const heroVideo = '/img/herovid.mp4';
+const heroVideo = 'https://ambrosport.s3.us-east-1.amazonaws.com/herovid.mp4';
 import LogoCarousel from '../components/LogoCarousel';
 import { useEffect, useRef } from 'react';
-const heroVideoMobile = '/img/herovidMobile.mp4';
+const heroVideoMobile = 'https://ambrosport.s3.us-east-1.amazonaws.com/herovid.mp4';
 const peruImage = '/img/peruWEB-21.jpg';
 
 export function Home() {
