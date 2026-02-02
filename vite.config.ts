@@ -51,11 +51,12 @@
     },
     build: {
       target: 'esnext',
-      outDir: 'dist',
+      outDir: 'build',
+      ssr: 'src/entry-server.tsx',
       rollupOptions: {
-        input: {
-          main: './index.html',
-          server: './src/entry-server.tsx',
+        input: './index.html',
+        output: {
+          dir: 'build',
         },
       },
     },
