@@ -2,24 +2,42 @@ import { render } from '../../src/entry-server.tsx';
 import fs from 'fs';
 import path from 'path';
 
-let cssFile = '';
-let jsFile = '';
+function getCSSContent() {
+  try {
+    const assetsDir = path.join(__dirname, '../../build/assets');
+    if (fs.existsSync(assetsDir)) {
+      const files = fs.readdirSync(assetsDir);
+      const cssFile = files.find(f => f.endsWith('.css'));
+      if (cssFile) {
+        const cssPath = path.join(assetsDir, cssFile);
+        return fs.readFileSync(cssPath, 'utf-8');
+      }
+    }
+  } catch (e) {
+    console.error('Error reading CSS:', e);
+  }
+  return '';
+}
 
-// Find the actual CSS and JS files from the build directory
-try {
-  const assetsDir = path.join(__dirname, '../../build/assets');
-  const files = fs.readdirSync(assetsDir);
-  cssFile = files.find(f => f.startsWith('index-') && f.endsWith('.css')) || 'index.css';
-  jsFile = files.find(f => f.startsWith('index-') && f.endsWith('.js')) || 'index.js';
-} catch (e) {
-  // Fallback if files can't be read
-  cssFile = 'index.css';
-  jsFile = 'index.js';
+function getJSFile() {
+  try {
+    const assetsDir = path.join(__dirname, '../../build/assets');
+    if (fs.existsSync(assetsDir)) {
+      const files = fs.readdirSync(assetsDir);
+      const jsFile = files.find(f => f.endsWith('.js') && !f.includes('server'));
+      return jsFile || '';
+    }
+  } catch (e) {
+    console.error('Error reading JS:', e);
+  }
+  return '';
 }
 
 export async function handler(event: any) {
   const url = event.path;
   const { html } = render(url);
+  const cssContent = getCSSContent();
+  const jsFile = getJSFile();
 
   return {
     statusCode: 200,
@@ -33,13 +51,13 @@ export async function handler(event: any) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ambro Sport</title>
-    <link rel="stylesheet" href="/assets/${cssFile}" />
+    ${cssContent ? `<style>${cssContent}</style>` : ''}
   </head>
   <body>
     <div id="root">${html}</div>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
-    <script type="module" src="/assets/${jsFile}"></script>
+    ${jsFile ? `<script type="module" src="/assets/${jsFile}"></script>` : ''}
   </body>
 </html>
     `,

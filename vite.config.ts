@@ -52,13 +52,15 @@
     build: {
       target: 'esnext',
       outDir: 'build',
-      ssr: 'src/entry-server.tsx',
+      manifest: true,
       rollupOptions: {
-        input: './index.html',
-        output: {
-          dir: 'build',
+        input: {
+          main: './index.html',
         },
       },
+    },
+    ssr: {
+      external: ['fs', 'path'],
     },
     server: {
       port: 3000,
