@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import Lightbox from '../components/Lightbox';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
 const peru10 = '/img/peruWEB-10.jpg';
@@ -84,13 +84,18 @@ const products = [
 const IMAGES = products.map(p => p.src);
 
 export function Products() {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [activeTab, setActiveTab] = useState('mens');
+  const activeTab = searchParams.get('tab') || 'mens';
 
   const openAt = (index: number) => {
     setCurrentIndex(index);
     setIsOpen(true);
+  };
+
+  const onTabChange = (value: string) => {
+    setSearchParams({ tab: value });
   };
 
   const onPrev = () => setCurrentIndex((i) => (i - 1 + IMAGES.length) % IMAGES.length);
@@ -120,7 +125,7 @@ export function Products() {
             <p className="text-gray-600 mt-2">Browse our products by category. Click any image to view larger.</p>
           </div>
 
-          <Tabs value={activeTab} onValueChange={setActiveTab} defaultValue="mens" className="w-full" suppressHydrationWarning>
+          <Tabs value={activeTab} onValueChange={onTabChange} className="w-full" suppressHydrationWarning>
             <TabsList className="flex justify-evenly mb-8 tab-header">
               <TabsTrigger value="mens" className="data-[state=active]:bg-blue-600 data-[state=active]:text-white">Mens</TabsTrigger>
               <TabsTrigger value="womens" className="data-[state=active]:bg-blue-600 data-[state=active]:text-white">Womens</TabsTrigger>
