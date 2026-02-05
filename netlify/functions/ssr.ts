@@ -48,13 +48,13 @@ export async function handler(event: any) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ambro Sport</title>
-    ${cssFile ? `<link rel="stylesheet" href="/assets/${cssFile}">` : ''}
+    ${cssFile ? `<link rel="stylesheet" crossorigin href="/assets/${cssFile}">` : ''}
+    ${jsFile ? `<script type="module" crossorigin src="/assets/${jsFile}"></script>` : ''}
   </head>
   <body>
     <div id="root">${html}</div>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
-    ${jsFile ? `<script type="module" src="/assets/${jsFile}"></script>` : ''}
   </body>
 </html>
     `,
