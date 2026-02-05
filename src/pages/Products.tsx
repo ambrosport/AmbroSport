@@ -1,5 +1,5 @@
-import React from 'react';
-import { useSearchParams } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useLocation, useHistory } from 'react-router-dom';
 import Lightbox from '../components/Lightbox';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
 const peru10 = '/img/peruWEB-10.jpg';
@@ -24,7 +24,7 @@ const img16 = '/img/product-16.png';
 const img17 = '/img/product-17.png';
 const img18 = '/img/product-18.png';
 const img19 = '/img/product-19.png';
-const img20 = '/img/product-20.png';
+const img20 = '/img/product-20.jpg';
 const img21 = '/img/product-21.png';
 const img22 = '/img/product-22.png';
 const img23 = '/img/product-23.png';
@@ -84,18 +84,24 @@ const products = [
 const IMAGES = products.map(p => p.src);
 
 export function Products() {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const location = useLocation();
+  const history = useHistory();
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const activeTab = searchParams.get('tab') || 'mens';
+
+  // Get tab from query string
+  const params = new URLSearchParams(location.search);
+  const activeTab = params.get('tab') || 'mens';
 
   const openAt = (index: number) => {
     setCurrentIndex(index);
     setIsOpen(true);
   };
 
+  // Update tab in URL
   const onTabChange = (value: string) => {
-    setSearchParams({ tab: value });
+    params.set('tab', value);
+    history.replace({ search: params.toString() });
   };
 
   const onPrev = () => setCurrentIndex((i) => (i - 1 + IMAGES.length) % IMAGES.length);
