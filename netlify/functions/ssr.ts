@@ -2,16 +2,13 @@ import { render } from '../../src/entry-server.tsx';
 import fs from 'fs';
 import path from 'path';
 
-function getCSSContent() {
+function getCSSFile() {
   try {
     const assetsDir = path.join(__dirname, '../../build/assets');
     if (fs.existsSync(assetsDir)) {
       const files = fs.readdirSync(assetsDir);
       const cssFile = files.find(f => f.endsWith('.css'));
-      if (cssFile) {
-        const cssPath = path.join(assetsDir, cssFile);
-        return fs.readFileSync(cssPath, 'utf-8');
-      }
+      return cssFile || '';
     }
   } catch (e) {
     console.error('Error reading CSS:', e);
@@ -36,7 +33,7 @@ function getJSFile() {
 export async function handler(event: any) {
   const url = event.path;
   const { html } = render(url);
-  const cssContent = getCSSContent();
+  const cssFile = getCSSFile();
   const jsFile = getJSFile();
 
   return {
@@ -51,7 +48,7 @@ export async function handler(event: any) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ambro Sport</title>
-    ${cssContent ? `<style>${cssContent}</style>` : ''}
+    ${cssFile ? `<link rel="stylesheet" href="/assets/${cssFile}">` : ''}
   </head>
   <body>
     <div id="root">${html}</div>
