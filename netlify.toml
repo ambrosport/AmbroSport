@@ -1,23 +1,12 @@
 # example netlify.toml
 [build]
   command = "npm run build"
-  functions = "netlify/functions"
   publish = "build"
 
-  ## Redirects for SSR
-  [[redirects]]
-    from = "/assets/*"
-    to = "/assets/:splat"
-    status = 200
-
-  [[redirects]]
-    from = "/img/*"
-    to = "/img/:splat"
-    status = 200
-
+  ## Redirects for SPA
   [[redirects]]
     from = "/*"
-    to = "/.netlify/functions/ssr"
+    to = "/index.html"
     status = 200
 
   ## (optional) Settings for Netlify Dev
