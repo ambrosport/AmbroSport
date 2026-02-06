@@ -7,7 +7,7 @@ const steveImg = '/img/steve.png';
 const shariImg = '/img/SHARI.png';
 const maxHeadshot = '/img/max-headshot.jpg';
 const maryImg = '/img/mary.jpeg';
-const averyImg = '/img/avery-39.png';
+const averyImg = '/img/avery.png';
 
 export function About() {
   const values = [
